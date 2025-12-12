@@ -1,0 +1,10 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "Running pre-push checks..."
+
+# Проверяем линтинг
+npm run lint
+
+# Проверяем сборку
+npm run build
