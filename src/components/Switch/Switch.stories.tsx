@@ -7,28 +7,39 @@ const meta: Meta<typeof Switch> = {
   component: Switch,
   tags: ['autodocs'],
 };
+
 export default meta;
 
 type Story = StoryObj<typeof Switch>;
 
 export const Default: Story = {
   render: () => {
-    return <Switch onChange={() => {}} />;
+    const [checked, setChecked] = React.useState(false);
+
+    return <Switch checked={checked} onChange={(e) => setChecked(e.target.checked)} />;
   },
 };
 
 export const Checked: Story = {
   render: () => {
-    return <Switch onChange={() => {}} checked={true} />;
+    const [checked, setChecked] = React.useState(true);
+
+    return <Switch checked={checked} onChange={(e) => setChecked(e.target.checked)} />;
   },
 };
 
 export const Disabled: Story = {
   render: () => {
-    return <Switch onChange={() => {}} disabled />;
+    const [checked, setChecked] = React.useState(false);
+
+    return <Switch checked={checked} disabled onChange={(e) => setChecked(e.target.checked)} />;
   },
 };
 
 export const DisabledChecked: Story = {
-  render: () => <Switch checked disabled onChange={() => {}} />,
+  render: () => {
+    const [checked, setChecked] = React.useState(true);
+
+    return <Switch checked={checked} disabled onChange={(e) => setChecked(e.target.checked)} />;
+  },
 };
