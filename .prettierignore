@@ -5,7 +5,6 @@ coverage/
 *.config.mjs
 *.config.cjs
 .eslintrc.*
-.prettierrc.*
+.prettierrc
 .gitignore
 README.md
-LICENSE

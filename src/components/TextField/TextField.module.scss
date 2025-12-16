@@ -1,0 +1,124 @@
+.wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 200px;
+  margin: 16px 0;
+
+  &.fullWidth {
+    width: 100%;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &.error {
+    .input {
+      border-color: #d32f2f !important;
+    }
+
+    .label {
+      color: #d32f2f !important;
+    }
+  }
+}
+
+.inputWrapper {
+  position: relative;
+  padding-top: 8px;
+}
+
+.input {
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.87);
+  transition: all 0.3s;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(16px, 27px);
+  transform-origin: top left;
+  transition: all 0.3s;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  padding: 0 4px;
+  z-index: 1;
+}
+
+.labelShrink {
+  transform: translate(16px, -50%) scale(0.75);
+  background-color: white;
+  color: #1e90ff;
+}
+
+.outlined {
+  padding: 16.5px 14px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+
+  &:hover {
+    border-color: rgba(0, 0, 0, 0.87);
+  }
+
+  &:focus {
+    border-color: #1e90ff;
+    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+  }
+}
+
+.filled {
+  padding: 22px 12px 12px;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.42);
+  background-color: rgba(0, 0, 0, 0.06);
+  border-radius: 4px 4px 0 0;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.09);
+    border-bottom-color: rgba(0, 0, 0, 0.87);
+  }
+
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.09);
+    border-bottom-color: #1e90ff;
+  }
+}
+
+.standard {
+  padding: 20px 0 4px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+  border-radius: 0;
+
+  &:hover {
+    border-bottom-color: rgba(0, 0, 0, 0.87);
+  }
+
+  &:focus {
+    border-bottom-color: #1e90ff;
+  }
+}
+
+.standard + .label {
+  transform: translate(0, 20px);
+}
+
+.standard.hasValue + .label,
+.standard:focus + .label {
+  transform: translate(0, -6px) scale(0.75);
+  background-color: transparent;
+}
+
+.filled.hasValue + .label,
+.filled:focus + .label {
+  transform: translate(12px, -6px) scale(0.75);
+  background-color: transparent;
+}

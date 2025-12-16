@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
+    "noEmit": false
+  },
+  "include": ["src"],
+  "exclude": [
+    "demo",
+    "dist",
+    "node_modules",
+
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    "src/**/*.stories.ts",
+    "src/**/*.stories.tsx",
+    "src/__mocks__/**",
+    "src/setupTests.ts",
+    "src/setupTests.tsx"
+  ]
+}

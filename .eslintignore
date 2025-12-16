@@ -1,0 +1,10 @@
+# .eslintignore
+.eslintrc.js
+eslint.config.js
+*.config.js
+*.config.ts
+node_modules/
+dist/
+build/
+coverage/
+storybook-static/
