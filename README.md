@@ -6,12 +6,12 @@ The essence of the project is to develop a custom React component library and pu
 
 ## Technologies used
 
-webpack
-react
-typescript
-eslint, prettier, husky
-jest, react testing library
-storybook
+- webpack
+- react
+- typescript
+- eslint, prettier, husky
+- jest, react testing library
+- storybook
 
 
 ## How to run the app
@@ -30,11 +30,17 @@ npm install
 
 npm i @kksushka/custom-components-lib
 
-## Example of using a component from the library:
+## Example of using a component from the library
+
+```tsx
 import React from "react";
-import { Button } from "@kksushka/custom-components-lib";
+import { Button } from "@kksushka/custom-lib-innowise";
 
 export const App = () => {
-  return <Button variant="contained" size="small">Click me</Button>;
+  return (
+    <Button variant="contained" size="small">
+      Click me
+    </Button>
+  );
 };
 
