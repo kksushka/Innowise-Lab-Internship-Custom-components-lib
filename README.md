@@ -28,7 +28,7 @@ npm install
 
 2. Install the library
 
-npm i @kksushka/custom-components-lib
+npm i @kksushka/custom-lib-innowise
 
 ## Example of using a component from the library
 
